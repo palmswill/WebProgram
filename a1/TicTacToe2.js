@@ -22,14 +22,17 @@ var winSets = [
 ];
 
 // X always gets to go first
-var player = "X";
-
+///making starting player random
+//var player = "X";
+var player = Math.random() >= 0.5 ? "X" : "O";
+document.getElementById("player").innerHTML = player;
 // keep track of how many cells are empty at any time
 var empty = 9;
 
 // keep track of game status - false if still playing
 var gameOver = false;
 
+var previousClick = null;
 /* Function resetGame() is called when user clicks on the "game reset" button
  1. sets content of all 9 cells to nothing
  2. sets the starting player (this version, X always starts the game)
@@ -42,10 +45,13 @@ function resetGame() {
   // assign all the innterHTML OF the td tag to be empty string ""
   for (i = 0; i < board.length; i++) {
     board[i].innerHTML = "";
+    ///reset backgroundColour of the last clicked element
+    board[i].style.backgroundColor = "FFFFFF";
   }
 
   // TODO reset player back to X and update it on the page
-  player = "X";
+  //player = "X";
+  player = Math.random() >= 0.5 ? "X" : "O";
   document.getElementById("player").innerHTML = player;
 
   // TODO reset gameOver and # of empty cells
@@ -63,7 +69,11 @@ function resetGame() {
  5. updates the message to the current player
  */
 function cellClicked(cell) {
-  console.log(cell.innerHTML === "");
+  /// if there was a previous clicked element, set its background back to white
+  if (previousClick) {
+    previousClick.style.backgroundColor = "#FFFFFF";
+  }
+  ///previousClick.innerHTML.style.backgroundColor = "#FFFFFF";
 
   //TODO: 1-5 should occur only when the selected cell is empty and the game is
   // still in progress!
@@ -75,10 +85,15 @@ function cellClicked(cell) {
     //the value of clicked cell become player (either "O" or "X" depends on player)
     cell.innerHTML = player;
     checkWin();
+    /// only switch player when game is not over;
+    if (!gameOver) {
+      player = player === "X" ? "O" : "X";
+      document.getElementById("player").innerHTML = player;
+    }
 
-    player = player === "X" ? "O" : "X";
-
-    document.getElementById("player").innerHTML = player;
+    cell.style.backgroundColor = "#F0F0F0";
+    console.log(cell);
+    previousClick = cell;
   }
 }
 
@@ -95,15 +110,20 @@ function checkWin() {
       board[winSets[i][1]].innerHTML == board[winSets[i][2]].innerHTML &&
       board[winSets[i][0]].innerHTML != ""
     ) {
+      ///change colour of winning combination to light blue when condition met
+      board[winSets[i][0]].style.color = "blue";
+      board[winSets[i][1]].style.color = "blue";
+      board[winSets[i][2]].style.color = "blue";
+
       // TODO: replace console.log("We have a winner!") with:
       //console.log("We have a winner!");
       //  - set gameOver variable: game is now over
-      //set the innerHTML of the first children of message div (p) to be "game is now over"
-      document.getElementById("message").children[0].innerHTML ="game is now over";
-      gameOver=true;
+      //set the innerHTML of the first children of message div (p) to be "game is now over", set gameOver to be true;
+      document.getElementById("message").children[0].innerHTML =
+        "game is now over";
+      gameOver = true;
       //  - display "X Wins!" or "O Wins!" in the winner H3
       document.getElementById("winner").innerHTML = player + " Wins!";
-      console.log(document.getElementById("winner"));
       //  - call displayWin(true) function
       displayWin(true);
       //  - break out of this loop: no point in continuing
