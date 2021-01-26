@@ -46,7 +46,7 @@ function resetGame() {
 
   // TODO reset player back to X and update it on the page
   player = "X";
-  document.getElementById("player").innterHTML = player;
+  document.getElementById("player").innerHTML = player;
 
   // TODO reset gameOver and # of empty cells
   gameOver = false;
@@ -99,8 +99,8 @@ function checkWin() {
       //console.log("We have a winner!");
       //  - set gameOver variable: game is now over
       //set the innerHTML of the first children of message div (p) to be "game is now over"
-      document.getElementById("message").children[0].innerHTML =
-        "game is now over";
+      document.getElementById("message").children[0].innerHTML ="game is now over";
+      gameOver=true;
       //  - display "X Wins!" or "O Wins!" in the winner H3
       document.getElementById("winner").innerHTML = player + " Wins!";
       console.log(document.getElementById("winner"));
@@ -115,7 +115,7 @@ function checkWin() {
   //       it means that there is no winner for this game
   if (empty == 0 && !gameOver) {
     // - set gameOver variable: game is now over
-    gameOver=true;
+    gameOver = true;
     document.getElementById("message").children[0].innerHTML =
       "game is now over";
     // - display "No one wins! :(" in the winner H3
