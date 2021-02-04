@@ -10,8 +10,9 @@ var pics = ["rock", "paper", "scissors"];
 
 const init=()=>{
     
-    ///loading image container
+    // total 3 variable declared- newNode,imageContainer,scoreBoard;
     let newNode;
+    ///loading image container
     let imgContainer=document.getElementById("img-container");
     pics.map(
         pictureid=>{
