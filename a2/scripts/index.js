@@ -39,10 +39,10 @@ const init=()=>{
     newNode=document.createElement("div");
     newNode.setAttribute("class","game-header");
     newNode.appendChild(document.createTextNode("The Computer Chooses:"));
-    document.body.insertBefore(newNode,document.body.lastElementChild.nextSibling);
+    document.body.insertBefore(newNode,document.body.lastElementChild);
     /// table--
     newNode=document.createElement("table");
-    document.body.insertBefore(newNode,document.body.lastElementChild.nextSibling);
+    document.body.insertBefore(newNode,document.body.lastElementChild);
     //tr
     newNode=document.createElement("tr");
     document.getElementsByTagName("table")[0].appendChild(newNode);
@@ -64,7 +64,7 @@ const init=()=>{
     //score
      scoreBoard=document.createElement("div");
      scoreBoard.setAttribute("id","score");
-     document.body.insertBefore(scoreBoard,document.body.lastElementChild.nextSibling);
+     document.body.insertBefore(scoreBoard,document.body.lastElementChild);
      ///scorediv
      newNode=document.createElement("div");
      newNode.appendChild(document.createTextNode("Score:"));
