@@ -1,0 +1,19 @@
+#mainform {
+    margin: 1em auto 1em;
+    width: 80%;
+    border: 3px solid firebrick;
+    padding: 10px;
+  }
+
+  body{
+      background-color:rgb(255, 208, 208);
+  }
+
+  label{
+      display:inline-block;
+      width:180px;
+  }
+
+  input.inp{
+      width:45px;
+  }

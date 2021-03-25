@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        
+        <form id="mainform" action="http://localhost:4000/index/site.php" method="POST">
+            <h2>Give us some Coffees...</h2>
+
+            <h4><label>Number of Coffees: </label>
+                <input class="inp" name="number" value="1" type="number" size="4" required/>
+            </h4>
+
+
+            <h4><label>Size: </label>
+                <select class="inp" name="size" type="number">
+                    <option value="xs" >Extra Small</option>
+                    <option value="s" >Small</option>
+                    <option value="m" >Medium</option>
+                    <option value="l" >Large</option>
+                    <option value="xl" >Extra Large</option>
+                </select>
+             
+            </h4>
+            <h4><label>How many creams? </label>
+                <input class="inp" name="cream" value="0" type="number" size="25"/>
+                
+            </h4>
+
+            <h4><label>How many sugars? </label>
+                <input class="inp" name="sugar" value="0"type="number" size="25"/>
+               
+            </h4>
+
+
+
+        <input name="mySubmit" type="submit" value="Order Coffee" />
+
+        </form>
+        <form id="mainform" action="http://localhost:4000/index/site.php" method="POST">
+            <h2>Give us some Coffees...</h2>
+
+            <h4>
+                <input class="inp" name="number" value="1" type="number" size="4" required/>
+                <select class="inp" name="size" type="number">
+                    <option value="xs" >Extra Small</option>
+                    <option value="s" >Small</option>
+                    <option value="m" >Medium</option>
+                    <option value="l" >Large</option>
+                    <option value="xl" >Extra Large</option>
+                </select>
+             
+            </h4>
+            <input type="radio" id="regular" name="coffetype" value="r" required>
+            <label for="regular">Regular</label><br>
+            <input type="radio" id="dd" name="coffetype" value="dd">
+            <label for="dd">Double Double</label><br>
+            <input type="radio" id="tt" name="coffetype" value="tt">
+            <label for="tt">Triple Triple</label><br>
+            <input type="radio" id="b" name="coffetype" value="b">
+            <label for="b">Black</label><br>
+            <input type="radio" id="bs" name="coffetype" value="bs">
+            <label for="bs">Black One Sugar</label><br>
+            <input type="radio" id="bss" name="coffetype" value="bss">
+            <label for="bss">Black Two Sugar</label><br>
+            <input type="radio" id="bsss" name="coffetype" value="bsss">
+            <label for="bsss">Black Three Sugar</label><br><br>
+            
+
+
+
+        <input name="mySubmit" type="submit" value="Order Coffee" />
+        </form>
+    </body>
+</html>

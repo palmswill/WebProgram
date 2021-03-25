@@ -1,0 +1,10 @@
+.mainform {
+    margin: 1em auto 1em;
+    width: 80%;
+    border: 3px solid firebrick;
+    padding: 10px;
+    background-color: white;
+  }
+  body{
+    background-color:rgb(255, 208, 208);
+}
