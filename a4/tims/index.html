@@ -2,18 +2,19 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Welcome to Tim Horton's !</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
+        <h1>Welcome to Tim Horton's!</h1>
         
-        <form id="mainform" action="http://localhost:4000/index/site.php" method="POST">
+        <form id="mainform" action="site.php" method="POST">
             <h2>Give us some Coffees...</h2>
 
             <h4><label>Number of Coffees: </label>
-                <input class="inp" name="number" value="1" type="number" size="4" required/>
+                <input class="inp" name="number" value="1" type="number" size="4" min=0 required/>
             </h4>
 
 
@@ -28,12 +29,12 @@
              
             </h4>
             <h4><label>How many creams? </label>
-                <input class="inp" name="cream" value="0" type="number" size="25"/>
+                <input class="inp" name="cream" value="0" type="number" min=0 size="25"/>
                 
             </h4>
 
             <h4><label>How many sugars? </label>
-                <input class="inp" name="sugar" value="0"type="number" size="25"/>
+                <input class="inp" name="sugar" value="0"type="number" min=0 size="25"/>
                
             </h4>
 
@@ -42,8 +43,8 @@
         <input name="mySubmit" type="submit" value="Order Coffee" />
 
         </form>
-        <form id="mainform" action="http://localhost:4000/index/site.php" method="POST">
-            <h2>Give us some Coffees...</h2>
+        <form id="mainform" action="site.php" method="POST">
+            <h2>...Or use the Slang!</h2>
 
             <h4>
                 <input class="inp" name="number" value="1" type="number" size="4" required/>

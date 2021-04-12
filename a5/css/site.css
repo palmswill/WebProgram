@@ -1,0 +1,32 @@
+table {
+    margin: 1em auto 1em;
+    width: 80%;
+    border: 3px solid firebrick;
+    background-color: white;
+    border-spacing:0px;
+  }
+h2{
+  margin: 1em auto 1em;
+  text-align:center;
+}
+h1{
+  margin: 1em auto 1em;
+  text-align:center;
+}
+th{
+  border: 1px solid black;
+  margin:0;
+}
+
+td{
+  border: 1px solid black;
+}
+  
+body{
+    background-color:rgb(255, 208, 208);
+}
+
+input{
+  display:inline-block;
+
+}

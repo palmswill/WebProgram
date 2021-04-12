@@ -1,0 +1,135 @@
+<html <!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <h1>Sport Form</h1>
+        <form id="mainform" action="insert.php" method="POST">
+            <h2>Insert New Sport Here</h2>
+
+            <h4><label>Sport ID: </label>
+                <input class="inp" name="sportid"  type="number" size="50" min=0 required/>
+            </h4>
+
+            
+
+            <h4><label>Name: </label>
+                <input class="inp" name="name"  type="textbox" size="50" min=0 required/>
+            </h4>
+
+            <h4><label>Player Count: </label>
+                <select class="inp" name="pcount" >
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                </select>
+             
+            </h4>
+            <h4><label>Indoor: </label>
+                <select class="inp" name="indoor" >
+                    <option value="Y" >Yes</option>
+                    <option value="N" >No</option>
+                </select>
+            <h4><label>Referee count: </label>
+                <select class="inp" name="rcount" >
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                </select>
+             
+            </h4>
+            <h4><label>Origin: </label>
+                <select class="major" name="origin" >
+                    <option value="Spain" >Spain</option>
+                    <option value="United States" >USA</option>
+                    <option value="Canada" >Canada</option>
+                    <option value="Japan" >Japan</option>
+                </select>
+             
+            </h4>
+
+
+         <input name="mySubmit" type="submit" value="Add New Sport" />
+
+        </form>
+
+
+
+        <form id="mainform" action="update.php" method="POST">
+            <h2>Update Sport by ID</h2>
+
+            <h4><label>Sport ID: </label>
+                <input class="inp" name="sportid"  type="number" size="50" min=0 required/>
+            </h4>
+
+            
+
+            <h4><label>Name: </label>
+                <input class="inp" name="name"  type="textbox" size="50" min=0 required/>
+            </h4>
+
+            <h4><label>Player Count: </label>
+                <select class="inp" name="pcount" >
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                </select>
+             
+            </h4>
+            <h4><label>Indoor: </label>
+                <select class="inp" name="indoor" >
+                    <option value="Y" >Yes</option>
+                    <option value="N" >No</option>
+                </select>
+            <h4><label>Referee count: </label>
+                <select class="inp" name="rcount" >
+                    <option value="1" >1</option>
+                    <option value="2" >2</option>
+                    <option value="3" >3</option>
+                    <option value="4" >4</option>
+                </select>
+             
+            </h4>
+            <h4><label>Origin: </label>
+                <select class="major" name="origin" >
+                    <option value="Spain" >Spain</option>
+                    <option value="United States" >USA</option>
+                    <option value="Canada" >Canada</option>
+                    <option value="Japan" >Japan</option>
+                </select>
+             
+            </h4>
+
+
+        <input name="mySubmit" type="submit" value="Update" />
+
+        </form>
+        <form id="mainform" action="delete.php" method="POST">
+            <h2>Delete by Sport ID</h2>
+
+            <h4><label>Sport ID: </label>
+                <input class="inp" name="sportid"  type="number" size="50" min=0 required/>
+            </h4>
+
+        <input name="mySubmit" type="submit" value="Delete sport" />
+
+        </form>
+        
+        <script src="" async defer></script>
+    </body>
+    <form id="mainform" action="show.php">
+        <input id="bot" type="submit" value="See Current database" />
+    </form>
+</html>

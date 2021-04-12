@@ -12,7 +12,10 @@
 
 
 <?php 
-$coffetype = $_POST["coffetype"];
+
+echo "test";
+
+@$coffetype = $_POST["coffetype"];
 $number = $_POST["number"];
 $size = $_POST["size"];
 

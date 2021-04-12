@@ -19,5 +19,18 @@
   }
 
   input.inp{
-      width:45px;
+      width:200px;
+      height:30px;
+  }
+
+  Select{
+    width:50px;
+}
+
+input#bot{
+  margin:40%;
+}
+
+  Select.major{
+      width:200px;
   }
